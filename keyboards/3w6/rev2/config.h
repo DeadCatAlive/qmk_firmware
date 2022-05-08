@@ -19,11 +19,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
 /* USB Device descriptor parameter */
-#define VENDOR_ID    0xFEED
-#define PRODUCT_ID   0x4658
+#define VENDOR_ID    0x03F0
+#define PRODUCT_ID   0x354A
 #define DEVICE_VER   0x0002
-#define MANUFACTURER weteor
-#define PRODUCT      3w6
+#define MANUFACTURER "HP, Inc"
+#define PRODUCT      Slim Keyboard
 
 /* key matrix size */
 #define MATRIX_ROWS 8
