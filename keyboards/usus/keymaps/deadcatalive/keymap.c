@@ -78,9 +78,9 @@ combo_t key_combos[COMBO_COUNT] = {
   [COMBO_P0] = COMBO(combo_P0, KC_F10),
   [COMBO_12] = COMBO(combo_12, KC_F11),
   [COMBO_90] = COMBO(combo_90, KC_F12),
-  [COMBO_UE] = COMBO(combo_UE, DE_UE),
-  [COMBO_OE] = COMBO(combo_OE, DE_OE),
-  [COMBO_AE] = COMBO(combo_AE, DE_AE),
+  [COMBO_UE] = COMBO(combo_UE, DE_UDIA),
+  [COMBO_OE] = COMBO(combo_OE, DE_ODIA),
+  [COMBO_AE] = COMBO(combo_AE, DE_ADIA),
   [COMBO_SS] = COMBO(combo_SS, DE_SS)
 };
 
@@ -98,8 +98,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_SYMBOLS] = LAYOUT(
 
   KC_F11,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,               KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F12,
-  KC_PAUS, DE_MORE, DE_RBRC, DE_RCBR, DE_RPRN, DE_BSLS,             DE_SLSH, DE_LPRN, DE_LCBR, DE_LBRC, DE_LESS, KC_PAUSE,
-  ____,    DE_LESS, DE_LBRC, DE_LCBR, DE_LPRN, DE_SLSH,             DE_BSLS, DE_RPRN, DE_RCBR, DE_RBRC, DE_MORE, ____,
+  KC_PAUS, DE_RABK, DE_RBRC, DE_RCBR, DE_RPRN, DE_BSLS,             DE_SLSH, DE_LPRN, DE_LCBR, DE_LBRC, DE_LABK, KC_PAUSE,
+  ____,    DE_LABK, DE_LBRC, DE_LCBR, DE_LPRN, DE_SLSH,             DE_BSLS, DE_RPRN, DE_RCBR, DE_RBRC, DE_RABK, ____,
   ____,    DE_DLR,  DE_PERC, DE_PIPE, DE_AT,   DE_AMPR, ____, ____, DE_AMPR, DE_AT,   DE_PIPE, DE_PERC, DE_DLR,  ____,
                     ____,    ____,    ____,    ____,    ____, ____, ____,    ____,    ____,    ____, 
                                                         ____, ____             
@@ -132,7 +132,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_TAB,   DE_Q, DE_W,    DE_E,  DE_R,  DE_T,                    DE_Y,    DE_U,    DE_I,    DE_O,     DE_P,    DE_ACUT, 
   KC_LSFT,  DE_A, DE_S,    DE_D,  DE_F,  DE_G,                    DE_H,    DE_J,    DE_K,    DE_L,     DE_HASH, DE_PLUS, 
   KC_LCTRL, DE_Z, DE_X,    DE_C,  DE_V,  DE_B,   ____,   ____,    DE_N,    DE_M,    DE_COMM, DE_DOT,   DE_MINS, KC_RSHIFT, 
-                  DE_LESS, DE_AE, DE_OE, KC_ESC, KC_SPC, KC_BSPC, KC_LEFT, KC_DOWN, KC_UP,   KC_RIGHT, 
+                  DE_LABK, DE_ADIA, DE_ODIA, KC_ESC, KC_SPC, KC_BSPC, KC_LEFT, KC_DOWN, KC_UP,   KC_RIGHT, 
                                                  KC_ENT, KC_DEL 
 ),
 
@@ -141,7 +141,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_TAB,   DE_Q, DE_W,    DE_E,  DE_R,  DE_T,                    DE_Y,    DE_U,    DE_I,    DE_O,     DE_P,    DE_ACUT, 
   KC_LSFT,  DE_A, DE_S,    DE_D,  DE_F,  DE_G,                    DE_H,    DE_J,    DE_K,    DE_L,     DE_HASH, DE_PLUS, 
   KC_LCTRL, DE_Z, DE_X,    DE_C,  DE_V,  DE_B,   ____,   ____,    DE_N,    DE_M,    DE_COMM, DE_DOT,   DE_MINS, MY_SARC, 
-                  DE_LESS, DE_AE, DE_OE, KC_ESC, KC_SPC, KC_BSPC, KC_LEFT, KC_DOWN, KC_UP,   KC_RIGHT, 
+                  DE_LABK, DE_ADIA, DE_ODIA, KC_ESC, KC_SPC, KC_BSPC, KC_LEFT, KC_DOWN, KC_UP,   KC_RIGHT, 
                                                  KC_ENT, KC_DEL 
 ),
 
@@ -290,7 +290,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 }
 
 #ifdef ENCODER_ENABLE
-void encoder_update_user(uint8_t index, bool clockwise) {
+bool encoder_update_user(uint8_t index, bool clockwise) {
   // dprintf("%u index, clockwise=%u\n", index, clockwise);
   if (index == 0) { /* First encoder */
     switch(get_highest_layer(layer_state)) {
@@ -315,6 +315,7 @@ void encoder_update_user(uint8_t index, bool clockwise) {
           break;
     }
   }
+  return false;
 }
 #endif
 
