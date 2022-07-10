@@ -1,3 +1,24 @@
-SRC += deadcatalive.c \
-			 wrappers.h \
-			 combos.h
+SRC +=  deadcatalive.c
+
+#COMBO_ENABLE = yes
+#LTO_ENABLE = yes
+
+#VIA_ENABLE = no
+#WPM_ENABLE = no
+#NKRO_ENABLE = no
+#AUDIO_ENABLE = no
+#STENO_ENABLE = no
+#LEADER_ENABLE = no
+#CONSOLE_ENABLE = no
+#COMMAND_ENABLE = no
+#UNICODE_ENABLE = no
+#MOUSEKEY_ENABLE = no
+#TERMINAL_ENABLE = no
+#KEY_LOCK_ENABLE = no
+#RGBLIGHT_ENABLE = no
+#BOOTMAGIC_ENABLE = no
+#SLEEP_LED_ENABLE = no
+#TAP_DANCE_ENABLE = no
+#VELOCIKEY_ENABLE = no
+#SWAP_HANDS_ENABLE = no
+#SPACE_CADET_ENABLE = no

@@ -1,0 +1,15 @@
+{
+  "author": "DeadCatAlive",
+  "documentation": "Wrapper for adalyn",
+  "keyboard": "adalyn",
+  "keymap": "deadcatalive",
+  "layers": [
+    [ "QWERTY" ],
+    [ "SYMBOLS" ],
+    [ "NUMBERS" ],
+    [ "NAVIGATION" ]
+  ],
+  "layout": "LAYOUT_wrapper_adalyn",
+  "notes": "nothing",
+  "version": 1
+}
