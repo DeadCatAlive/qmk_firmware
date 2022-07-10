@@ -15,7 +15,9 @@
   */
  #include QMK_KEYBOARD_H
  
-#include "deadcatalive.h"
+#include "users/deadcatalive/deadcatalive.h"
+
+#define LAYOUT_wrapper(...)   LAYOUT(__VA_ARGS__)
 
 enum layers{
   _BASE,

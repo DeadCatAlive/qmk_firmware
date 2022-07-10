@@ -1,9 +1,6 @@
 #pragma once
 
 #include <keymap_german.h>
-#include "deadcatalive.h"
-
-#define LAYOUT_wrapper(...)                  LAYOUT(__VA_ARGS__)
 
 #define __________________3THUMB_L_________________ LT(_NAV, KC_ESC), LT(_NUM,KC_ENT), LT(_SYM, KC_SPC)
 #define __________________3THUMB_R_________________ LT(_NUM, KC_BSPC), LT(_SYM, KC_DEL), LT(_NAV, KC_ESC)
