@@ -1,7 +1,7 @@
 SRC +=  deadcatalive.c
 
-#COMBO_ENABLE = yes
-#LTO_ENABLE = yes
+COMBO_ENABLE = yes
+LTO_ENABLE = yes
 
 #VIA_ENABLE = no
 #WPM_ENABLE = no

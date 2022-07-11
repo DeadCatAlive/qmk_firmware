@@ -1,7 +1,7 @@
 {
   "author": "DeadCatAlive",
-  "documentation": "Wrapper for adalyn",
-  "keyboard": "adalyn",
+  "documentation": "Wrapper for 3w6",
+  "keyboard": "3w6/rev1",
   "keymap": "deadcatalive",
   "layers": [
     [ "QWERTY" ],

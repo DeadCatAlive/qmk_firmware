@@ -54,7 +54,7 @@
 */
 
 /* Adalyn */
-#define LAYOUT_wrapper_adalyn(...) LAYOUT(__VA_ARGS__)
+#define LAYOUT_wrapper_deadcatalive(...) LAYOUT(__VA_ARGS__)
 
 
 #define QWERTY \
